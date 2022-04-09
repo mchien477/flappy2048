@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Flappy 2048 - Chú Thợ Điện</title>
+<link rel="canonical" href="https://www.chuthodien.com/">
+<link href="./css/main.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="https://chuthodien.com/favicon.ico">
+<link rel="apple-touch-icon" href="https://chuthodien.com/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+<style type="text/css" media="all">
+html, body {
+    color: #a6825a;
+}
+.smalltit{
+	position: absolute;
+    top: 10%;
+    margin: 13px 0px;
+	font-weight:700;
+}
+.tita{color:#e3ac00;}
+.titb{color:#34ab00;}
+.left {
+	float: left;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+.right {
+	float: right;
+}
+.game-explanation {
+    margin-top: 60px;
+}
+@media screen and (max-height: 820px) {
+	.left {
+		width: 70%;
+	}
+	.right {
+		width: 30%;
+	}
+}
+</style>
+<script src="./js/jquery.min.js"></script>
+<script>
+function playSound(url) {
+  const audio = new Audio(url);
+  audio.play();
+}
+</script>
+</head>
+<body style="zoom: 1;">
+  <div class="container">
+      <div class="heading">
+      <h1 class="title">Flappy 2048</h1><br/><a href="https://chuthodien.com/"><span class="smalltit"><span class="tita">Chuthodien</span><span class="titb">.com</span></span></a>
+      <div class="scores-container">
+        <div class="score-container">1<div class="score-addition">+1</div></div>
+        <div class="best-container">3</div>
+      </div>
+    </div>
+    <div class="game-container">
+      <div class="grid-container" onclick="playSound('jump.wav');">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="tile tile-block-a" style="top: 135px; left: 68.5547px;"><div class="tile-inner"></div></div>
+        <div class="tile tile-block-b" style="top: 202.5px; left: 68.5547px;"><div class="tile-inner"></div></div>
+        <div class="tile tile-block-c" style="top: 0px; left: 271.055px;"><div class="tile-inner"></div></div>
+        <div class="tile tile-block-d" style="top: 202.5px; left: 271.055px;"><div class="tile-inner"></div></div>
+        <div class="tile tile-bird tile-2" style="top: 252.247px;"><div class="tile-inner">1</div></div>
+      </div>
+    </div>
+	<p class="game-explanation center"><a href="https://chuthodien.com/">Về trang chủ</a><br/>Based on 2048 and Flappy Bird.<br/>Design by Minh Chiến.</p>
+    <hr>
+    <div class="copyright center">
+	© 2021 <a href="https://chuthodien.com/">Chú Thợ Điện</a>  | Tks to <a href="https://chuthodien.com/">hczhcz</a> | MIT license.
+	</div>
+	</div>
+  <script src="./js/animframe_polyfill.js"></script>
+  <script src="./js/keyboard_input_manager.js"></script>
+  <script src="./js/html_actuator.js"></script>
+  <script src="./js/grid.js"></script>
+  <script src="./js/tile.js"></script>
+  <script src="./js/local_score_manager.js"></script>
+  <script src="./js/game_manager.js"></script>
+  <script src="./js/application.js"></script>
+
+
+</body></html>
